@@ -1,17 +1,17 @@
-*Repo*
+***Repo***
 
-**InitRepo**
+*InitRepo*
     
     git init main
     git add .
     git commit -m 'some commits'
 
-**CloneRepo**
+*CloneRepo*
 
     git clone someRepo
 
 
-**Config**
+*Config*
 
     Set the user info for code submission
     
@@ -20,7 +20,7 @@
 
 
 
-**GitHub**
+*GitHub*
 
     
     git remote add reponame url
@@ -33,16 +33,74 @@
 
 
 
-*Shell*
+***Shell***
 
-    Variable
-    Array
-    Operator
-    echo
-    printf
-    test
-    flow control
-    function
+*Variable*
+
+    Define: num=1 (no space is allowed)
+    Apply: $num, num=2, num=$[ a+b ], let "num++"
+
+    ${n} use the parameter in the script
+    $* and $@ shows all the parameters
+    $# # of parameters
+    
+*Array*
+
+    Define: array=(A B "C" D)
+    Apply: ${array[n]}, array[*/@], array[n]=2, 
+
+    关联数组（hash map） declare -A site = ([key1]=value1 [key2]=value2)
+
+    ${!site[*]} return all keys
+    ${#site[*]} return # of pairs
+        
+*Operator*
+
+    `expr 2 + 2`  vs  $[2+2]
+    [ $a -? $b ]
+    Comparsion: -eq -nq -gt -lt -ge -le
+    bool: -o -a 
+    logic: || &&
+        echo " [ expr1 -o expr2 ] = [[ expr1 || expr2 ]]"
+        echo " [ expr1 -a expr2 ] = [[ expr1 && expr2 ]]"
+    character: -z -n = !=
+    file: [ -? $file ]-r -w -x -d -f -s -e
+
+*echo*
+
+    echo -e
+    echo -c
+    echo ''  不进行转义
+    echo `date`
+    
+*printf*
+
+    printf "%2s %-5c %8d %4.2f"  "-" force to the left
+    "" and '' are the same
+     
+*test*
+
+    test arguments = [ arguments ]
+
+*flow control*
+
+    case
+    1)
+    ;;
+    *)
+    ;;
+    esac
+
+*function*
+
+    functionname(){
+        action
+        [return ]
+    }
+
+    ${n} access inputs
+
+    $? get the latest return value
 
 
 
