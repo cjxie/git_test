@@ -1,3 +1,4 @@
+*Repo*
 **InitRepo**
     
     git init main
@@ -28,6 +29,9 @@
     cat ../.ssh/id_rsa.pub
   
     # Copy-paste the public key to Github SSH setting
-  
+
+
+
+
 
   
