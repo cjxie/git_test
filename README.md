@@ -33,6 +33,17 @@
 
 
 
+*Shell*
+
+    Variable
+    Array
+    Operator
+    echo
+    printf
+    test
+    flow control
+    function
+
 
 
   
