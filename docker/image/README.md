@@ -7,7 +7,7 @@
 
 	docker commit -m="" -a="" containerId imageName
 	docker buildx build (absoluet path of Dockfile)
-	docer tag ImageId Image:Tag
+	docer tag Image Image:Tag
 		
 ## Docker容器互联
 	
