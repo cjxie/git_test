@@ -1,2 +1,4 @@
 [submodule "camera/stitching_tutorial"]
+	path = camera/stitching_tutorial
 	url = https://github.com/OpenStitching/stitching_tutorial.git
+
