@@ -103,5 +103,10 @@
     $? get the latest return value
 
 
+***Docker in VScode ***
+
+   	Install the extension
+	Attach Docker to the Vscode
+
 
   
