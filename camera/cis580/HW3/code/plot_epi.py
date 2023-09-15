@@ -10,7 +10,7 @@ def plot_lines(lines, h, w):
     for i in range(lines.shape[1]):
         # plt.close('all')
         if abs(lines[0, i] / lines[1, i]) < 1:
-            y0 = -lines[2, i] / lines[1, i]
+            y0 = -lines[2, i] / lines[1, i]  # Ax + By + z = 0
             yw = y0 - w * lines[0, i] / lines[1, i]
             plt.plot([0, w], [y0, yw])
             # plt.clf()
@@ -31,7 +31,11 @@ def plot_epipolar_lines(image1, image2, uncalibrated_1, uncalibrated_2, E, K, pl
 
     """ YOUR CODE HERE
     """
-    
+    ## u2T F u1 = 0  A x = 0 means x on the plane A
+    F = np.linalg.inv(K).T @ E @ np.linalg.inv(K)
+    epipolar_lines_in_1 = (uncalibrated_2.T @ F).T
+    epipolar_lines_in_2 = (uncalibrated_1.T @ F.T).T
+
     """ END YOUR CODE
     """
     

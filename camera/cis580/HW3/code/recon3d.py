@@ -15,6 +15,9 @@ def reconstruct3D(transform_candidates, calibrated_1, calibrated_2):
     lambdas = np.zeros((2, calibrated_1.shape[0]))
     """ YOUR CODE HERE
     """
+    for i in range(calibrated_1.shape[0]):
+      temp = np.hstack((calibrated_2[i,:].reshape(3,1), -R@calibrated_1[i,:].reshape(3,1)))
+      lambdas[:,i] = (np.linalg.pinv(temp) @ (T/np.linalg.norm(T))).reshape(2,)
 
     """ END YOUR CODE
     """
