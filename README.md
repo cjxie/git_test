@@ -23,13 +23,16 @@
 *GitHub*
 
     
-    git remote add reponame url
+    git remote add reponame ssh-url
     
     # Generate ssh key
     ssh-keygen -t rsa -C "youremail@example.com"
     cat ../.ssh/id_rsa.pub
   
     # Copy-paste the public key to Github SSH setting
+
+    # setup the upstream fro push
+    git push --set-upstream reponame master 
 
 
 
