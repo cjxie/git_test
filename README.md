@@ -34,6 +34,18 @@
     # setup the upstream fro push
     git push --set-upstream reponame master 
 
+*Restore git *
+     	You need to do two commands, the first will "unstage" the file (removes it from the list of files that are ready to be committed). Then, you undo the delete.
+
+	If you read the output of the git status command (after the using git rm), it actually tells you how to undo the changes (do a git status after each step to see this).
+	Unstage the file:
+
+		git reset HEAD <filename>
+
+	Restore it (undo the delete):
+
+		git checkout -- <filename>
+
 
 
 ***Shell***
